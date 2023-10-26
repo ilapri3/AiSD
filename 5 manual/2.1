@@ -1,0 +1,12 @@
+str=input()
+ans_str=''
+ans=''
+for i in range(len(str)):
+    if str[i]!=' ':
+        ans_str+=str[i]
+    else:
+        break
+for i in range(len(ans_str)):
+    if ans_str[i].isalpha():
+        ans+=ans_str[i]
+print(ans)
