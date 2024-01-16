@@ -1,0 +1,6 @@
+l1 = iter([0,1,2,3,4,5])
+try:
+    while True:
+        print(next(l1))
+except StopIteration:
+    print('the list is over')
