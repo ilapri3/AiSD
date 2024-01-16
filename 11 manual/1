@@ -1,0 +1,8 @@
+import re
+file, lenght = map(str,input('Введите имя файла (полный путь):').split())
+using_file = open(str(file))
+oper_file = re.findall(r'\w+',using_file.read())[:int(lenght)]
+dict = {oper_file[el]: oper_file.count(oper_file[el]) for el in range(len(oper_file))}
+ans = sorted(dict.items(), key = lambda item: item[1], reverse = True)
+
+print(*ans)
